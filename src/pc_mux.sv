@@ -6,6 +6,4 @@ module PC_mux (
 
     assign PC_next = (PC_src) ? PC_target : PC_plus_4;
 
-
-
 endmodule
