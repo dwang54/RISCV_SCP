@@ -6,7 +6,7 @@ module PC (
 
     logic [31:0] PC_reg;
 
-    always_ff @(posedge clk or posedge reset) begin
+    always_ff @(posedge clk or posedge rst) begin
         if (rst) 
             PC_reg <= 0;
         else 
