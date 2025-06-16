@@ -1,11 +1,10 @@
 module writeback_mux (
-    input logic [31:0] ALUResult, ReadData
-    input logic ResultSrc,
+    input logic [31:0] ALUResult, ReadData, PC_plus_4
+    input logic [1:0] ResultSrc,
     output logic [31:0] Result
 );
 
-    // currently do not have support for J-type instructions
-    assign Result = (ResultSrc) ? ReadData : ALUResult;
+    assign Result = (ResultSrc == 2'b10) ? PC_plus_4 : (ResultSrc == 2'b01) ? ReadData : ALUResult;
 
 
 endmodule
