@@ -25,18 +25,18 @@ module alu_decoder (
                     3'b010:
                         ALUControl = 4'b0111;       // slt
                     3'b011:
-                        ALUControl = 4'b1000        // sltu
+                        ALUControl = 4'b1000;        // sltu
                     3'b100:
-                        ALUControl = 4'b0100        // xor
+                        ALUControl = 4'b0100;        // xor
                     3'b101:
                         if (funct7b5)
-                            ALUControl = 4'b1011;   // srl
-                        else 
                             ALUControl = 4'b1100;   // sra
+                        else 
+                            ALUControl = 4'b1011;   // srl
                     3'b110:
                         ALUControl = 4'b0001;       // or
                     3'b111:
-                        ALUControl = 4'b0;          // and
+                        ALUControl = 4'b0000;          // and
                     default:
                         ALUControl = 4'b1111;
                 endcase
