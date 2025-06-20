@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module PC_target (
     input logic [31:0] PC,
     input logic [31:0] ImmExt,

@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Data_Memory (
     input logic clk, WriteEnable,
     input logic [31:0] ALUResult,

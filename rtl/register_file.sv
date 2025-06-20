@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Register_File (
     input logic clk, WE3
     input logic [4:0] A1, A2, A3,

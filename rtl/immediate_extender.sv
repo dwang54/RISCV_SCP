@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Immediate_Extender (
     input logic [31:7] Instr,
     input logic [1:0] ImmSrc,

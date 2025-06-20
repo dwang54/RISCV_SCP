@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Instruction_Memory (
     input logic [31:0] A,
     output logic [31:0] RD

@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Main_Decoder (
     input logic [6:0] op,
     output logic MemWrite, ALUSrc, RegWrite, jump, branch,

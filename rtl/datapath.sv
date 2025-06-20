@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Data_Path (
     input logic clk, rst,
     input logic  [1:0] ResultSrc,

@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module PC_mux (
     input logic [31:0] PCplus4, PC_target, 
     input logic PCSrc,
