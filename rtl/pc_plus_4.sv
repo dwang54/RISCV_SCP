@@ -5,6 +5,6 @@ module PC_plus_4 (
     output logic [31:0] PCplus4
 );
 
-    assign PC_plus_4 = PC + 32'd4;
+    assign PCplus4 = PC + 32'd4;
 
 endmodule
