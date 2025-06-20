@@ -42,8 +42,45 @@ module data_path (
         .PC_next(PC_next)
     );
 
-    Register
+    Register_File register_file (
+        .clk(clk),
+        .WE3(RegWrite),
+        .A1(Instr[19:15]),
+        .A2(Instr[24:20]),
+        .A3(Instr[11:7]),
+        .WD3(Result),
+        .RD1(SrcA),
+        .RD2(WriteData)
+    );
 
+    Immediate_Extender immediate_extender (
+        .Instr(Instr),
+        .ImmSrc(ImmSrc),
+        .ImmExt(ImmExt)
+    );
+
+    Alu_Mux alu_mux (
+        .RD2(WriteData),
+        .ImmExt(ImmExt),
+        .ALUSrc(ALUSrc),
+        .SrcB(SrcB)
+    );
+
+    ALU alu (
+        .SrcA(SrcA),
+        .SrcB(SrcB),
+        .ALUControl(ALUControl),
+        .Zero(Zero),
+        .ALUResult(ALUResult)
+    );
+
+    Writeback_Mux writeback_mux (
+        .ALUResult(ALUResult),
+        .ReadData(ReadData),
+        .PCplus4(PCplus4),
+        .ResultSrc(ResultSrc),
+        .Result(Result)
+    );
 
 
 endmodule
