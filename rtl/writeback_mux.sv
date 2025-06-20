@@ -1,4 +1,4 @@
-module writeback_mux (
+module Writeback_Mux (
     input logic [31:0] ALUResult, ReadData, PC_plus_4
     input logic [1:0] ResultSrc,
     output logic [31:0] Result

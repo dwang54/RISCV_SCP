@@ -1,4 +1,4 @@
-module data_memory (
+module Data_Memory (
     input logic clk, WriteEnable,
     input logic [31:0] ALUResult,
     input logic [31:0] WriteData,

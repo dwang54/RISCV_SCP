@@ -1,4 +1,4 @@
-module ss_core (
+module SS_Core (
 
 );
 

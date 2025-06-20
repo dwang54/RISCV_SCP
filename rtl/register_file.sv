@@ -1,4 +1,4 @@
-module register_file (
+module Register_File (
     input logic clk, WE3
     input logic [4:0] A1, A2, A3,
     input logic [31:0] WD3,

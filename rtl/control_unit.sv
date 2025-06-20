@@ -1,4 +1,4 @@
-module control_unit (
+module Control_Unit (
     input logic [6:0] op,
     input logic [14:12] funct3,
     input logic funct7b5, Zero,

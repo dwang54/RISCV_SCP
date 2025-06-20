@@ -1,4 +1,4 @@
-module main_decoder (
+module Main_Decoder (
     input logic [6:0] op,
     output logic MemWrite, ALUSrc, RegWrite, jump, branch,
     output logic [1:0] ResultSrc, ImmSrc, ALUOp

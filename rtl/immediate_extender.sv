@@ -1,4 +1,4 @@
-module immediate_extender (
+module Immediate_Extender (
     input logic [31:7] Instr,
     input logic [1:0] ImmSrc,
     output logic [31:0] ImmExt 
