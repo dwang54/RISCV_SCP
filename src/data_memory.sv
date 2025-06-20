@@ -5,7 +5,7 @@ module data_memory (
     output logic [31:0] ReadData
 );
 
-    logic [31:0] memory [1023:0];
+    logic [31:0] memory [0:1023];
     logic [31:0] word_addr;
     assign word_addr = ALUResult[31:2];
 
