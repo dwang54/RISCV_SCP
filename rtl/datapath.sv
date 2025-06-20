@@ -1,4 +1,4 @@
-module data_path (
+module Data_Path (
     input logic clk, rst,
     input logic  [1:0] ResultSrc,
     input logic PCSrc, ALUSrc,
