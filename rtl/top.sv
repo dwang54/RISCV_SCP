@@ -21,7 +21,7 @@ module top (
         .ReadData(ReadData)
     );
 
-    SS_Core ss_core (
+    SC_Core sc_core (
         .clk(clk),
         .rst(rst),
         .Instr(Instr),
