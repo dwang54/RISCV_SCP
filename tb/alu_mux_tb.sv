@@ -38,6 +38,7 @@ initial begin
     #10;
     $display("ALUSrc=%b, SrcB=%h (Expected: %h)", ALUSrc, SrcB, RD2);
 
+    $finish;
 
 end
 
