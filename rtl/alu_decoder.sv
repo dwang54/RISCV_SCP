@@ -10,13 +10,13 @@ module Alu_Decoder (
 
 
     always_comb begin
-        case (ALUOp):
+        case (ALUOp)
             2'b00:
                 ALUControl = 4'b0010;                   // addition
             2'b01:
                 ALUControl = 4'b0110;                   // subtraction
             2'b10:
-                case (funct3):
+                case (funct3)
                     3'b000:
                         if (funct7b5 & opb5)            // R-type 
                             ALUControl = 4'b0110;
