@@ -15,7 +15,6 @@ PC dut (
 parameter clk_period = 10;
 
 
-always #5 clk = ~clk;
 initial begin
     clk = 0;
     forever begin
@@ -26,14 +25,24 @@ end
 initial begin
     $dumpfile("PC_tb.vcd");
     $dumpvars(0, PC_tb);
-    
 
+    rst = 0;
+    #3;            
+    rst = 1;
+    #clk_period;   
+    rst = 0;
 
+    PC_next = 32'hAAAA_BBBB;
+    #clk_period;
+    $display("Time=%0t | PC_out = %h (Expected: AAAA_BBBB)", $time, PC_out);
 
+    PC_next = 32'h1234_5678;
+    #clk_period;
+    $display("Time=%0t | PC_out = %h (Expected: 1234_5678)", $time, PC_out);
 
-
-
-
+    PC_next = 32'hCAFEBABE;
+    #clk_period;
+    $display("Time=%0t | PC_out = %h (Expected: CAFEBABE)", $time, PC_out);
 
 
     $finish;
