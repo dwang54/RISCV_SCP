@@ -27,7 +27,7 @@ initial begin
     $dumpvars(0, PC_tb);
 
     rst = 0;
-    #3;            
+    #5;
     rst = 1;
     #clk_period;   
     rst = 0;
